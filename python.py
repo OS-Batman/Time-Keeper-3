@@ -62,5 +62,8 @@ def sent_report(cookies):
     # 关闭服务器
     server.quit()
     return json_res['m']
-stu_varify_cookies = os.environ['COOKIES']
+stu_varify_cookies = {
+    "UUkey":os.environ['UU'],
+    "eai-sess":os.environ['EAI']
+}
 sent_report(stu_varify_cookies)
