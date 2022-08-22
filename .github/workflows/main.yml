@@ -24,4 +24,10 @@ jobs:
         with:
           python-version: 3.9
       - run: pip install -r ./r.txt  #此处为安装依赖包
-      - run: python ./python.py
+      - name: Run app
+        env:
+          ADDRESS: ${{ secrets.ADDRESS}}
+          PASSWORD: ${{ secrets.PASSWORD}}
+          EAI: ${{ secrets.EAI}}
+          UU: ${{ secrets.UU }}
+        run: python ./python.py
