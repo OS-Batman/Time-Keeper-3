@@ -20,8 +20,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       - name: 'Set up Python'
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v1
         with:
-          python-version: 3.11
+          python-version: 3.9
       - run: pip install -r ./r.txt  #此处为安装依赖包
       - run: python ./python.py
