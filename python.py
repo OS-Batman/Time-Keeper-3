@@ -45,10 +45,10 @@ def sent_report(cookies):
     json_res = res.json()
     print("填报返回结果："+json_res['m'])
     # 邮件发送
-    from_addr = os.environ['ADDRESS']
-    password = os.environ['PASSWORD']
+    from_addr = os.environ[ADDRESS]
+    password = os.environ[PASSWORD]
     # 收信方邮箱
-    to_addr = os.environ['ADDRESS']
+    to_addr = os.environ[ADDRESS]
     # 发信服务器
     smtp_server = 'smtp.qq.com'
     # 邮箱正文内容，第一个参数为内容，第二个参数为格式(plain 为纯文本)，第三个参数为编码
@@ -63,7 +63,7 @@ def sent_report(cookies):
     server.quit()
     return json_res['m']
 stu_varify_cookies = {
-    "UUkey":os.environ['UU'],
-    "eai-sess":os.environ['EAI']
+    "UUkey":os.environ[UU],
+    "eai-sess":os.environ[EAI]
 }
 sent_report(stu_varify_cookies)
