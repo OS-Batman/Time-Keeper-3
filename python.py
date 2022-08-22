@@ -62,7 +62,5 @@ def sent_report(cookies):
     # 关闭服务器
     server.quit()
     return json_res['m']
-stu_varify_cookies = {
-  os.environ['COOKIES']
-    }
+stu_varify_cookies = os.environ['COOKIES']
 sent_report(stu_varify_cookies)
