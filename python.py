@@ -33,11 +33,7 @@ def sent_report(cookies):
         'sfyzz': '0',
         'qtqk':'',
         'ymtys':''
-    }
-    params = modify_report_params(params,custom_params)
-    # print(params)
-    params = urllib.parse.urlencode(params, quote_via=urllib.parse.quote)
-    # print(params)
+        }
     if(use_proxy==False):
         res = requests.post("https://app.nwu.edu.cn/ncov/wap/open-report/save",headers=headers,cookies=cookies,data=params)
     else:
