@@ -5,6 +5,7 @@ import smtplib
 import os
 # email 用于构建邮件内容
 from email.mime.text import MIMEText
+-*- coding: UTF-8 -*-
 custom_params = [
 
 ]
