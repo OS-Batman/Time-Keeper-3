@@ -1,3 +1,4 @@
+ # -*- coding:utf-8 -*-
 import requests
 import urllib
 # smtplib 用于邮件的发信动作
@@ -5,7 +6,6 @@ import smtplib
 import os
 # email 用于构建邮件内容
 from email.mime.text import MIMEText
--*- coding: UTF-8 -*-
 custom_params = [
 
 ]
