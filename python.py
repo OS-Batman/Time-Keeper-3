@@ -12,10 +12,6 @@ use_proxy = False
 proxy_detail = {
     'http':'127.0.0.1:8080'
 }
-def modify_report_params(params,change):
-    for line in change:
-        params[line[0]] = line[1]
-    return params
 
 def sent_report(cookies):
     headers = {
