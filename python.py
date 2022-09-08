@@ -22,18 +22,18 @@ def sent_report(cookies):
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 Edg/83.0.478.58"
     }
     params = {
-        'sfzx': '0',
-        'tw': '1',
-        'area': '江苏省 南京市 玄武区',
-        'city': '南京市',
-        'province': '江苏省',
-        'address': '江苏省南京市玄武区梅园新村街道南京外国语学校',
-        'geo_api_info': '{"type":"complete","position":{"Q":32.056225585938,"R":118.801584201389,"lng":118.801584,"lat":32.056226},"location_type":"html5","message":"Get ipLocation failed.Get geolocation success.Convert Success.Get address success.","accuracy":50455,"isConverted":true,"status":1,"addressComponent":{"citycode":"025","adcode":"320102","businessAreas":[{"name":"梅园","id":"320102","location":{"Q":32.045543,"R":118.79988500000002,"lng":118.799885,"lat":32.045543}}],"neighborhoodType":"","neighborhood":"","building":"","buildingType":"","street":"演武新村","streetNumber":"153-11号","country":"中国","province":"江苏省","city":"南京市","district":"玄武区","towncode":"320102002000","township":"梅园新村街道"},"formattedAddress":"江苏省南京市玄武区梅园新村街道南京外国语学校","roads":[],"crosses":[],"pois":[],"info":"SUCCESS"}',
-        'sfcyglq': '0',
-        'sfyzz': '0',
-        'qtqk':'',
-        'ymtys':''
-        }
+        "sfzx":"1", #是否在校
+        "tw":"1",   #体温（list）(0-"Below 36";1-"36-36.5";2-"36.5-36.9";3-"36.9-37.3"; ... , i<=8)
+        "area":"陕西省 西安市 长安区",
+        "city":"西安市",
+        "province":"陕西省",
+        "address":"陕西省西安市长安区郭杜街道西北大学南校区学生公寓10号楼西北大学长安校区",
+        "geo_api_info":'{"type":"complete","info":"SUCCESS","status":1,"$Da":"jsonp_687452_","position":{"Q":34.14218,"R":108.87518999999998,"lng":108.87519,"lat":34.14218},"message":"Get ipLocation success.Get address success.","location_type":"ip","accuracy":null,"isConverted":true,"addressComponent":{"citycode":"029","adcode":"610116","businessAreas":[],"neighborhoodType":"","neighborhood":"","building":"","buildingType":"","street":"文苑南路","streetNumber":"11号","country":"中国","province":"陕西省","city":"西安市","district":"长安区","township":"郭杜街道"},"formattedAddress":"陕西省西安市长安区郭杜街道西北大学南校区学生公寓10号楼西北大学长安校区","roads":[],"crosses":[],"pois":[]}',   #高德SDK返回值
+        "sfcyglq":"0",  #是否隔离期
+        "sfyzz":"0",    #是否有症状
+        "qtqk":"",  #其他情况
+        "ymtys":""  #不明（可能是一码通颜色，暂无用）
+    }
     if(use_proxy==False):
         res = requests.post("https://app.nwu.edu.cn/ncov/wap/open-report/save",headers=headers,cookies=cookies,data=params)
     else:
